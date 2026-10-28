@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,34 +11,116 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-universo fixed-top" aria-label="Navegación principal">
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Navegación principal">
       <div class="container">
         <a class="navbar-brand" href="index.html"><i class="fa-solid fa-user-astronaut"></i>Universo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="menuPrincipal">
+        <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="/html/sol.html">El Sol</a></li>
-            <li class="nav-item"><a class="nav-link" href="/html/luna.html">La Luna</a></li>
-            <li class="nav-item"><a class="nav-link" href="/html/historia.html">Historia</a></li>
-            <li class="nav-item"><a class="nav-link" href="/html/curiosidades.html">Curiosidades</a></li>
-            <li class="nav-item"><a class="nav-link" href="/html/contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="sol.html">El Sol</a></li>
+            <li class="nav-item"><a class="nav-link" href="luna.html">La Luna</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="curiosidades.html">Curiosidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  
+  <main>
+    <section class="portada">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+            <span class="tag">Bienvenido al</span>
+            <h1 class="display-1 fw-bold titulo">Universo</h1>
+            <p class="fs-5 text-body-secondary mt-3">Un lugar lleno de misterios, galaxias y secretos que aún estamos descubriendo.</p>
+            <a href="sol.html" class="btn btn-line mt-2">Explorar <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+          <div class="col-12 col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+            <img src="../img/galaxia.png" class="galaxia img-fluid d-block mx-auto" alt="Galaxia espiral brillando en el espacio">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5" aria-labelledby="cifras">
+      <div class="container">
+        <h2 id="cifras" class="visually-hidden">Cifras del universo</h2>
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up">
+            <article class="card h-100 sube">
+              <div class="card-body d-flex align-items-center gap-3">
+                <i class="fa-solid fa-hurricane text-primary fs-2"></i>
+                <div>
+                  <div class="fw-semibold">≈ <span data-num="2">0</span> billones</div>
+                  <div class="small text-body-secondary">de galaxias en el universo observable.</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <article class="card h-100 sube">
+              <div class="card-body d-flex align-items-center gap-3">
+                <i class="fa-solid fa-hourglass-half text-primary fs-2"></i>
+                <div>
+                  <div class="fw-semibold">≈ <span data-num="13.8" data-dec="1">0</span> mil millones</div>
+                  <div class="small text-body-secondary">de años de edad del universo.</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <article class="card h-100 sube">
+              <div class="card-body d-flex align-items-center gap-3">
+                <i class="fa-solid fa-star text-primary fs-2"></i>
+                <div>
+                  <div class="fw-semibold">≈ <span data-num="100">0</span> mil millones</div>
+                  <div class="small text-body-secondary">de estrellas en la Vía Láctea.</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <article class="card h-100 sube">
+              <div class="card-body d-flex align-items-center gap-3">
+                <i class="fa-solid fa-ring text-primary fs-2"></i>
+                <div>
+                  <div class="fw-semibold">Y sigue...</div>
+                  <div class="small text-body-secondary">expandiéndose.</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <small>&copy; <span id="anio">2026</span> Universo. Todos los derechos reservados.</small>
+      <div class="redes">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="subir" type="button" aria-label="Subir al inicio"><i class="fa-solid fa-chevron-up"></i></button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="/scripts/script.js"></script>
+  <script src="../scripts/script.js"></script>
 </body>
 </html>
