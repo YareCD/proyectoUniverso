@@ -12,7 +12,147 @@
 </head>
 <body>
 
-  
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-user-astronaut"></i>Universo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="sol.html">El Sol</a></li>
+            <li class="nav-item"><a class="nav-link active" href="luna.html" aria-current="page">La Luna</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="curiosidades.html">Curiosidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-5" data-aos="fade-right">
+            <span class="tag">Satélite natural</span>
+            <h1 class="display-4 fw-bold titulo"><i class="fa-solid fa-moon text-primary"></i> La Luna</h1>
+            <p class="sub">Un mundo de contrastes</p>
+            <p class="text-body-secondary">La Luna es el único satélite natural de la Tierra. Su gravedad influye en las mareas y en la estabilidad del planeta. Además, su superficie está llena de cráteres, mares y misterios que aún se estudian.</p>
+            <button class="btn btn-line" type="button" data-bs-toggle="collapse" data-bs-target="#masLuna" aria-expanded="false" aria-controls="masLuna">Más datos</button>
+            <div class="collapse mt-3" id="masLuna">
+              <div class="card card-body">
+                <ul class="mb-0 text-body-secondary">
+                  <li>Siempre vemos la misma cara de la Luna desde la Tierra.</li>
+                  <li>Se aleja de nuestro planeta unos 3.8 cm cada año.</li>
+                  <li>No tiene atmósfera, por eso las huellas de los astronautas siguen ahí.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in">
+            <div id="luna" class="luna mx-auto" data-fase="llena">
+              <img src="../img/luna.png" alt="La Luna llena con sus cráteres">
+              <div class="sombra"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-left">
+            <div class="card">
+              <div class="card-body">
+                <fieldset>
+                  <legend class="fs-6 fw-semibold">Fases de la Luna</legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="fase" id="nueva" value="nueva">
+                    <label class="form-check-label" for="nueva">Nueva</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="fase" id="creciente" value="creciente">
+                    <label class="form-check-label" for="creciente">Creciente</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="fase" id="llena" value="llena" checked>
+                    <label class="form-check-label" for="llena">Llena</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="fase" id="menguante" value="menguante">
+                    <label class="form-check-label" for="menguante">Menguante</label>
+                  </div>
+                  <p id="descFase" class="small text-body-secondary mt-3 mb-0" aria-live="polite">Luna llena: la Tierra queda entre el Sol y la Luna, y vemos el disco completo.</p>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-4">
+          <div class="col-6 col-md-4 col-lg" data-aos="fade-up">
+            <article class="card h-100 sube">
+              <div class="card-body">
+                <i class="fa-solid fa-circle-dot text-primary fs-4"></i>
+                <div class="small text-primary">Diámetro</div>
+                <div class="fw-semibold">3,474 km</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="80">
+            <article class="card h-100 sube">
+              <div class="card-body">
+                <i class="fa-solid fa-earth-americas text-primary fs-4"></i>
+                <div class="small text-primary">Distancia a la Tierra</div>
+                <div class="fw-semibold">384,400 km</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="160">
+            <article class="card h-100 sube">
+              <div class="card-body">
+                <i class="fa-solid fa-weight-hanging text-primary fs-4"></i>
+                <div class="small text-primary">Gravedad</div>
+                <div class="fw-semibold">1/6 de la terrestre</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-6 col-lg" data-aos="fade-up" data-aos-delay="240">
+            <article class="card h-100 sube">
+              <div class="card-body">
+                <i class="fa-solid fa-rotate text-primary fs-4"></i>
+                <div class="small text-primary">Periodo de rotación</div>
+                <div class="fw-semibold">27.3 días</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg" data-aos="fade-up" data-aos-delay="320">
+            <article class="card h-100 sube">
+              <div class="card-body">
+                <i class="fa-solid fa-arrows-spin text-primary fs-4"></i>
+                <div class="small text-primary">Periodo de traslación</div>
+                <div class="fw-semibold">27.3 días</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <small>&copy; <span id="anio">2026</span> Universo. Todos los derechos reservados.</small>
+      <div class="redes">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="subir" type="button" aria-label="Subir al inicio"><i class="fa-solid fa-chevron-up"></i></button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="../scripts/script.js"></script>
