@@ -312,3 +312,26 @@ main {
 }
 
 
+
+
+
+.pie {
+  padding: 20px 0;
+  border-top: 1px solid #2a2354;
+  font-size: 14px;
+  color: #b9b6d6;
+}
+
+.redes a {
+  display: inline-block;
+  margin-left: 14px;
+  font-size: 20px;
+  color: #b9b6d6;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.redes a:hover {
+  color: #b48cff;
+  transform: translateY(-3px);
+}
