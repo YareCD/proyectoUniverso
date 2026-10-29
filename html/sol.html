@@ -15,7 +15,7 @@
   <header>
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Navegación principal">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-user-astronaut"></i>Universo</a>
+        <a class="navbar-brand d-flex align-items-center" href="index.html"><i class="fa-solid fa-user-astronaut"></i>Universo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,36 +46,36 @@
             <div class="row g-3 my-3">
               <div class="col-6 col-md-3">
                 <article class="card h-100 sube">
-                  <div class="card-body">
-                    <i class="fa-solid fa-circle-dot text-primary fs-4"></i>
-                    <div class="small text-primary">Diámetro</div>
+                  <div class="card-body d-flex flex-column">
+                    <i class="fa-solid fa-circle-dot morado fs-4"></i>
+                    <div class="small morado">Diámetro</div>
                     <div class="fw-semibold">1,392,700 km</div>
                   </div>
                 </article>
               </div>
               <div class="col-6 col-md-3">
                 <article class="card h-100 sube">
-                  <div class="card-body">
-                    <i class="fa-solid fa-temperature-half text-primary fs-4"></i>
-                    <div class="small text-primary">Superficie</div>
+                  <div class="card-body d-flex flex-column">
+                    <i class="fa-solid fa-temperature-half morado fs-4"></i>
+                    <div class="small morado">Superficie</div>
                     <div class="fw-semibold">5,500 °C</div>
                   </div>
                 </article>
               </div>
               <div class="col-6 col-md-3">
                 <article class="card h-100 sube">
-                  <div class="card-body">
-                    <i class="fa-solid fa-fire text-primary fs-4"></i>
-                    <div class="small text-primary">Núcleo</div>
+                  <div class="card-body d-flex flex-column">
+                    <i class="fa-solid fa-fire morado fs-4"></i>
+                    <div class="small morado">Núcleo</div>
                     <div class="fw-semibold">15,000,000 °C</div>
                   </div>
                 </article>
               </div>
               <div class="col-6 col-md-3">
                 <article class="card h-100 sube">
-                  <div class="card-body">
-                    <i class="fa-regular fa-clock text-primary fs-4"></i>
-                    <div class="small text-primary">Edad</div>
+                  <div class="card-body d-flex flex-column">
+                    <i class="fa-regular fa-clock morado fs-4"></i>
+                    <div class="small morado">Edad</div>
                     <div class="fw-semibold">≈ 4,600 millones de años</div>
                   </div>
                 </article>
@@ -95,9 +95,9 @@
             </div>
           </div>
 
-          <div class="col-12 col-lg-5 order-1 order-lg-2" data-aos="zoom-in">
-            <img id="imgSol" src="../img/sol.png" class="sol img-fluid d-block mx-auto" alt="El Sol brillando con sus llamaradas">
-            <div class="text-center mt-4">
+          <div class="col-12 col-lg-5 order-1 order-lg-2 d-flex flex-column align-items-center" data-aos="zoom-in">
+            <img id="imgSol" src="../img/sol.png" class="sol" alt="El Sol brillando con sus llamaradas">
+            <div class="d-flex justify-content-center mt-4">
               <button id="btnSol" class="btn btn-line" type="button">
                 <i class="fa-solid fa-play me-2"></i><span>Ver el Sol en movimiento</span>
               </button>
