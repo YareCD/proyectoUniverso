@@ -174,3 +174,104 @@ main {
   transform: scale(1.08);
 }
 
+
+
+
+.galaxia {
+  width: 400px;
+  animation: flotar 8s ease-in-out infinite;
+}
+
+.sol {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: brillo 4s ease-in-out infinite;
+}
+
+.sol.mov {
+  animation: brillo 4s ease-in-out infinite, girar 25s linear infinite;
+}
+
+.luna {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #bbbbbb;
+  box-shadow: 0 0 50px rgba(220, 215, 255, 0.35);
+  animation: flotar 6s ease-in-out infinite;
+}
+
+
+
+
+.sombra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0 #07061a;
+  transition: box-shadow 0.7s;
+}
+
+.luna[data-fase="nueva"] .sombra {
+  box-shadow: inset 0 0 0 400px #07061a;
+}
+
+.luna[data-fase="creciente"] .sombra {
+  box-shadow: inset 140px 0 70px 10px #07061a;
+}
+
+.luna[data-fase="menguante"] .sombra {
+  box-shadow: inset -140px 0 70px 10px #07061a;
+}
+
+.img-historia {
+  max-height: 380px;
+  animation: flotar 7s ease-in-out infinite;
+}
+
+.img-astro {
+  max-height: 380px;
+}
+
+
+
+
+.linea {
+  border-left: 2px solid #b48cff;
+}
+
+.hito {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.hito::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -32px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #b48cff;
+  box-shadow: 0 0 12px #b48cff;
+}
+
+.cita {
+  padding-left: 16px;
+  border-left: 3px solid #b48cff;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: #e6a8ff;
+}
+
+
+
+
