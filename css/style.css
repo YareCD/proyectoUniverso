@@ -143,3 +143,34 @@ main {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(180, 140, 255, 0.35);
 }
+
+
+
+
+.card {
+  color: #ecebf8;
+  background-color: rgba(20, 17, 52, 0.85);
+  border: 1px solid #4a3d8f;
+  border-radius: 14px;
+}
+
+.sube {
+  transition: all 0.3s;
+}
+
+.sube:hover {
+  transform: translateY(-6px);
+  border-color: #b48cff;
+  box-shadow: 0 10px 25px rgba(120, 80, 255, 0.3);
+}
+
+.img-card {
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.sube:hover .img-card {
+  transform: scale(1.08);
+}
+
