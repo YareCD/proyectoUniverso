@@ -57,3 +57,43 @@ if (numeros.length > 0) {
   window.addEventListener('scroll', revisarNumeros);
   revisarNumeros();
 }
+
+// btn de movimiento para el sol
+const btnSol = document.querySelector('#btnSol');
+const imgSol = document.querySelector('#imgSol');
+
+if (btnSol && imgSol) {
+  btnSol.addEventListener('click', function () {
+    imgSol.classList.toggle('mov');
+
+    if (imgSol.classList.contains('mov')) {
+      btnSol.querySelector('i').className = 'fa-solid fa-pause me-2';
+      btnSol.querySelector('span').textContent = 'Detener movimiento';
+    } else {
+      btnSol.querySelector('i').className = 'fa-solid fa-play me-2';
+      btnSol.querySelector('span').textContent = 'Ver el Sol en movimiento';
+    }
+  });
+}
+
+// mivimientos d elas fases de la luna
+const luna = document.querySelector('#luna');
+const fases = document.querySelectorAll('input[name="fase"]');
+const descFase = document.querySelector('#descFase');
+
+const textos = {
+  nueva: 'Luna nueva: la cara iluminada mira hacia el Sol y casi no la vemos desde la Tierra.',
+  creciente: 'Cuarto creciente: se ilumina poco a poco la mitad derecha en el hemisferio norte.',
+  llena: 'Luna llena: la Tierra queda entre el Sol y la Luna, y vemos el disco completo.',
+  menguante: 'Cuarto menguante: la luz va desapareciendo y queda iluminada la otra mitad.'
+};
+
+if (luna) {
+  for (let i = 0; i < fases.length; i++) {
+    fases[i].addEventListener('change', function () {
+      luna.dataset.fase = this.value;
+      descFase.textContent = textos[this.value];
+    });
+  }
+}
+
