@@ -97,3 +97,28 @@ if (luna) {
   }
 }
 
+// filtros para las curiosidades
+const filtros = document.querySelectorAll('[data-filtro]');
+const items = document.querySelectorAll('[data-cat]');
+
+for (let i = 0; i < filtros.length; i++) {
+  filtros[i].addEventListener('click', function () {
+
+    for (let j = 0; j < filtros.length; j++) {
+      filtros[j].classList.remove('btn-main');
+      filtros[j].classList.add('btn-line');
+    }
+    this.classList.remove('btn-line');
+    this.classList.add('btn-main');
+
+    const filtro = this.dataset.filtro;
+
+    for (let k = 0; k < items.length; k++) {
+      if (filtro === 'todas' || items[k].dataset.cat === filtro) {
+        items[k].classList.remove('d-none');
+      } else {
+        items[k].classList.add('d-none');
+      }
+    }
+  });
+}
