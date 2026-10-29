@@ -217,6 +217,7 @@ if (form) {
     return marcar(mensaje, true, '');
   }
 
+  // validar mientras escriben
   nombre.addEventListener('input', validarNombre);
   correo.addEventListener('input', validarCorreo);
   motivo.addEventListener('change', validarMotivo);
@@ -230,6 +231,7 @@ if (form) {
     validarMensaje();
   });
 
+  // alerta con SweetAlert2
   function alerta(icono, titulo, texto) {
     if (window.Swal) {
       Swal.fire({
@@ -244,5 +246,34 @@ if (form) {
       alert(titulo + ' - ' + texto);
     }
   }
+    form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
+    const okNombre = validarNombre();
+    const okCorreo = validarCorreo();
+    const okMotivo = validarMotivo();
+    const okTemas = validarTemas();
+    const okMensaje = validarMensaje();
+
+    if (!(okNombre && okCorreo && okMotivo && okTemas && okMensaje)) {
+      const primero = form.querySelector('.is-invalid');
+      if (primero) {
+        primero.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      alerta('error', 'Revisa el formulario', 'Hay campos que necesitan correcciones.');
+      return;
+    }
+
+    const primerNombre = nombre.value.trim().split(' ')[0];
+    alerta('success', '¡Gracias, ' + primerNombre + '!', 'Recibimos tu mensaje. Seguimos explorando el universo juntos.');
+
+    form.reset();
+    const campos = form.querySelectorAll('.is-valid, .is-invalid');
+    for (let i = 0; i < campos.length; i++) {
+      campos[i].classList.remove('is-valid');
+      campos[i].classList.remove('is-invalid');
+    }
+    errTemas.classList.remove('d-block');
+    contador.textContent = '0/300';
+  });
 }
