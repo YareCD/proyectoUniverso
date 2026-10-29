@@ -217,4 +217,32 @@ if (form) {
     return marcar(mensaje, true, '');
   }
 
+  nombre.addEventListener('input', validarNombre);
+  correo.addEventListener('input', validarCorreo);
+  motivo.addEventListener('change', validarMotivo);
+
+  for (let i = 0; i < temas.length; i++) {
+    temas[i].addEventListener('change', validarTemas);
+  }
+
+  mensaje.addEventListener('input', function () {
+    contador.textContent = mensaje.value.length + '/300';
+    validarMensaje();
+  });
+
+  function alerta(icono, titulo, texto) {
+    if (window.Swal) {
+      Swal.fire({
+        icon: icono,
+        title: titulo,
+        text: texto,
+        background: '#14113a',
+        color: '#ecebf8',
+        confirmButtonColor: '#9a6bff'
+      });
+    } else {
+      alert(titulo + ' - ' + texto);
+    }
+  }
+
 }
