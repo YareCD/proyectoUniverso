@@ -335,3 +335,35 @@ main {
   color: #b48cff;
   transform: translateY(-3px);
 }
+
+
+
+
+
+#subir {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #b48cff;
+  border-radius: 50%;
+  color: #b48cff;
+  background-color: #0d0b26;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+#subir.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#subir:hover {
+  color: #120c2e;
+  background-color: #b48cff;
+}
+
+
