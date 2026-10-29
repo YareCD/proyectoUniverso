@@ -105,3 +105,41 @@ main {
 
 
 
+.btn-main,
+.btn-line {
+  padding: 10px 24px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.btn-line {
+  color: white;
+  background-color: transparent;
+  border: 1px solid #b48cff;
+}
+
+.btn-line:hover,
+.btn-line:active {
+  color: #120c2e;
+  background-color: #b48cff;
+  border-color: #b48cff;
+}
+
+.btn-main {
+  color: white;
+  background-color: #9a6bff;
+  border: 1px solid #9a6bff;
+}
+
+.btn-main:hover,
+.btn-main:active {
+  color: #120c2e;
+  background-color: #e6a8ff;
+  border-color: #e6a8ff;
+}
+
+.btn-main:hover,
+.btn-line:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(180, 140, 255, 0.35);
+}
