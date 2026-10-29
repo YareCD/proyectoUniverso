@@ -1,12 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    
-    </body>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Datos curiosos del universo: galaxias, agujeros negros, nebulosas y más.">
+  <title>Curiosidades</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html"><i class="fa-solid fa-user-astronaut"></i>Universo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="sol.html">El Sol</a></li>
+            <li class="nav-item"><a class="nav-link" href="luna.html">La Luna</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link active" href="curiosidades.html" aria-current="page">Curiosidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada pb-5">
+      <div class="container">
+        <div class="mb-4" data-aos="fade-up">
+          <span class="tag">Galaxias y más</span>
+          <h1 class="display-4 fw-bold titulo"><i class="fa-solid fa-wand-magic-sparkles morado"></i> Datos curiosos del universo</h1>
+          <p class="sub">Lo increíble también es real</p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-4" role="group" aria-label="Filtrar curiosidades">
+          <button type="button" class="btn btn-main" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="btn btn-line" data-filtro="galaxias" aria-pressed="false">Galaxias</button>
+          <button type="button" class="btn btn-line" data-filtro="objetos" aria-pressed="false">Objetos extraños</button>
+          <button type="button" class="btn btn-line" data-filtro="misterios" aria-pressed="false">Misterios</button>
+        </div>
+
+        <div class="row g-3" data-aos="fade-up">
+          <div class="col-12 col-md-6 col-lg-4" data-cat="galaxias">
+            <article class="card h-100 sube overflow-hidden">
+              <img src="../img/via-lactea.jpg" class="card-img-top img-card" alt="La Vía Láctea vista como una galaxia espiral">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">La Vía Láctea</h2>
+                <p class="card-text small text-body-secondary mb-0">Nuestra galaxia tiene un diámetro de unos 100,000 años luz y contiene entre 100 y 400 mil millones de estrellas.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-cat="objetos">
+            <article class="card h-100 sube overflow-hidden">
+              <img src="../img/agujero-negro.jpg" class="card-img-top img-card" alt="Agujero negro rodeado de un disco de luz naranja">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Agujeros negros</h2>
+                <p class="card-text small text-body-secondary mb-0">Son regiones del espacio donde la gravedad es tan fuerte que ni la luz puede escapar.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-cat="objetos">
+            <article class="card h-100 sube overflow-hidden">
+              <img src="../img/nebulosa.jpg" class="card-img-top img-card" alt="Nebulosa de gas y polvo con colores azules y rosas">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Nebulosas</h2>
+                <p class="card-text small text-body-secondary mb-0">Son nubes de gas y polvo donde nacen nuevas estrellas.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-cat="galaxias">
+            <article class="card h-100 sube overflow-hidden">
+              <img src="../img/exoplaneta.jpg" class="card-img-top img-card" alt="Exoplaneta morado orbitando una estrella lejana">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Exoplanetas</h2>
+                <p class="card-text small text-body-secondary mb-0">Se han descubierto más de 5,000 exoplanetas, y muchos podrían tener condiciones para la vida.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-cat="misterios">
+            <article class="card h-100 sube overflow-hidden">
+              <img src="../img/materia-oscura.jpg" class="card-img-top img-card" alt="Espacio oscuro con cúmulos de estrellas distantes">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Materia oscura</h2>
+                <p class="card-text small text-body-secondary mb-0">No se puede ver, pero representa aprox. el 27 % del universo.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-cat="misterios">
+            <article class="card h-100 sube overflow-hidden">
+              <img src="../img/universo-expansion.jpg" class="card-img-top img-card" alt="Red de filamentos de luz que representa la expansión del universo">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">El universo se expande</h2>
+                <p class="card-text small text-body-secondary mb-0">Su expansión se acelera, y aún no sabemos por qué.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <small>&copy; <span id="anio">2026</span> Universo. Todos los derechos reservados.</small>
+      <div class="redes">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="subir" type="button" aria-label="Subir al inicio"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="../scripts/script.js"></script>
+</body>
 </html>
