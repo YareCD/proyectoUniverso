@@ -275,3 +275,40 @@ main {
 
 
 
+
+.form-control,
+.form-select {
+  color: #ecebf8;
+  background-color: #07061a;
+  border: 1px solid #4a3d8f;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: #ecebf8;
+  background-color: #07061a;
+  border-color: #b48cff;
+  box-shadow: 0 0 0 3px rgba(180, 140, 255, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #b48cff;
+  border-color: #b48cff;
+}
+
+.list-group-item {
+  color: #ecebf8;
+  background-color: rgba(20, 17, 52, 0.85);
+  border-color: #4a3d8f;
+}
+
+.frase {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+}
+
+.frase strong {
+  color: #e6a8ff;
+}
+
+
