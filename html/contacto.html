@@ -1,12 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    
-    </body>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escríbenos tus dudas o comentarios sobre el universo.">
+  <title>Contacto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html"><i class="fa-solid fa-user-astronaut"></i>Universo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="sol.html">El Sol</a></li>
+            <li class="nav-item"><a class="nav-link" href="luna.html">La Luna</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="curiosidades.html">Curiosidades</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada pb-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6" data-aos="fade-right">
+            <span class="tag">¿Tienes alguna pregunta o comentario?</span>
+            <h1 class="display-4 fw-bold titulo">Cuéntanos</h1>
+            <p class="text-body-secondary">Si te interesa aprender más sobre el universo, déjanos tus dudas. ¡Nos encantará leerte!</p>
+
+            <form id="formContacto" class="card card-body p-4" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label"><i class="fa-regular fa-user me-1"></i> Nombre completo *</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Ana López" required maxlength="60" autocomplete="name">
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="correo" class="form-label"><i class="fa-regular fa-envelope me-1"></i> Correo electrónico *</label>
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required autocomplete="email">
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="motivo" class="form-label"><i class="fa-regular fa-file-lines me-1"></i> ¿Qué te gustaría saber? *</label>
+                <select class="form-select" id="motivo" name="motivo" required>
+                  <option value="" selected disabled>Elige una opción</option>
+                  <option value="Sobre el Sol">Sobre el Sol</option>
+                  <option value="Sobre la Luna">Sobre la Luna</option>
+                  <option value="Sobre galaxias">Sobre galaxias</option>
+                  <option value="Sugerencia para el sitio">Sugerencia para el sitio</option>
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <fieldset class="mb-3">
+                <legend class="form-label fs-6">¿Qué temas te interesan más? *</legend>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="temas" id="tSol" value="El Sol">
+                    <label class="form-check-label" for="tSol">El Sol</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="temas" id="tLuna" value="La Luna">
+                    <label class="form-check-label" for="tLuna">La Luna</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="temas" id="tGalaxias" value="Galaxias">
+                    <label class="form-check-label" for="tGalaxias">Galaxias</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="temas" id="tAgujeros" value="Agujeros negros">
+                    <label class="form-check-label" for="tAgujeros">Agujeros negros</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="temas" id="tPlanetas" value="Planetas">
+                    <label class="form-check-label" for="tPlanetas">Planetas</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="temas" id="tOtro" value="Otro">
+                    <label class="form-check-label" for="tOtro">Otro</label>
+                  </div>
+                </div>
+                <div class="invalid-feedback" id="errTemas">Selecciona al menos un tema.</div>
+              </fieldset>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje (opcional)</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" maxlength="300" placeholder="Escribe aquí tu duda o comentario"></textarea>
+                <div class="invalid-feedback"></div>
+                <div class="form-text text-end" id="contador">0/300</div>
+              </div>
+
+              <button type="submit" class="btn btn-main align-self-start">Enviar <i class="fa-solid fa-paper-plane ms-1"></i></button>
+            </form>
+
+            <div id="enviados" class="mt-4 d-none">
+              <h2 class="h6">Tus últimos mensajes (guardados en este navegador)</h2>
+              <ul id="lista" class="list-group"></ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 d-flex flex-column align-items-center text-center" data-aos="fade-left">
+            <p class="frase">"El universo no solo está afuera, también está en <strong>tu curiosidad</strong>."</p>
+            <img src="../img/astronauta.png" class="img-astro img-fluid rounded-4 mt-3" alt="Astronauta observando el universo desde una roca">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <small>&copy; <span id="anio">2026</span> Universo. Todos los derechos reservados.</small>
+      <div class="redes">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="subir" type="button" aria-label="Subir al inicio"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../scripts/script.js"></script>
+</body>
 </html>
